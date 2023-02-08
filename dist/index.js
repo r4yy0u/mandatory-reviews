@@ -85,7 +85,7 @@ function run() {
                 })
                     .filter(Boolean);
                 if (reviews.length < count)
-                    core.setFailed(`Mandatory Approval Required from ${usernames}`);
+                    core.setFailed(`Mandatory Approval Required from ${usernames}\nReviewed: ${reviews}\nRequired count: ${count};
             })
                 .catch(error => core.setFailed(error.message));
         }
